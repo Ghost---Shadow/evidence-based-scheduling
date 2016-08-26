@@ -1,5 +1,12 @@
-<ul>
-  <li ng-repeat="task in $ctrl.tasks">
-    <span>{{task}}</span>
-  </li>
-</ul>
+<button ng-click="$ctrl.addTask()">Add Task</button>
+<div ng-repeat="task in $ctrl.tasks track by $index">
+  <div class="well">  
+    <input type="text" ng-model="task.name" placeholder="Task name"></input>
+    <input type="text" ng-model="task.estimated" placeholder="Estimated time"></input>
+    <span>{{task.actual}}</span>
+    <span>{{$ctrl.getVelocity($index) | number:2}}
+    <button ng-click="$ctrl.toggleTimer($index)">{{$ctrl.getStopwatchStatus($index)}}</button>
+    <button ng-click="$ctrl.removeTask($index)">x</button>
+  </div>
+</div>
+

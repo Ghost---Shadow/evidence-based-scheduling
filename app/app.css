@@ -1,1 +1,37 @@
+.dark{
+    //background: #333333;
+    color: #dddddd;
+}
+.graphing-area{
+    height: 300px;
+    width: 300px;
+    background: #dddddd;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+#wrapper {
+  min-height: 100%;
+  overflow: auto;
+}
+
+.container {
+  min-height: 100%;
+  overflow: auto;
+}
+
+.container .row .col-md-6 {
+  min-height: 100%;
+}
+
+.row {
+    height: 100%;
+}
 

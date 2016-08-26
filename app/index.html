@@ -1,27 +1,47 @@
 <!doctype html>
 <html lang="en" ng-app="EbsMonteCarlo">
-  <head>
-    <meta charset="utf-8">
-    <title>Monte Carlo</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="app.css" />
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="app.module.js"></script>
 
-    <script src="members/members.module.js"></script>
-    <script src="members/members.component.js"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Monte Carlo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="app.css" />
+  <script src="bower_components/angular/angular.js"></script>
 
-    <script src="statistics/statistics.module.js"></script>
-    <script src="statistics/statistics.component.js"></script>
+  <script src="bower_components/angular-chart.js/node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
 
-    <script src="task/task.module.js"></script>
-    <script src="task/task.component.js"></script>
-  </head>
-  <body>
+  <script src="app.module.js"></script>
 
-    <members> </members>
-    <statistics> </statistics>
-    <task> </task>
+  <script src="members/members.module.js"></script>
+  <script src="members/members.component.js"></script>
 
-  </body>
+  <script src="statistics/statistics.module.js"></script>
+  <script src="statistics/statistics.component.js"></script>
+
+  <script src="task/task.module.js"></script>
+  <script src="task/task.component.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Place holder text</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <members> </members>
+      </div>
+      <div class="col-md-6">
+        <task> </task>
+      </div>
+      <div class="col-md-4">
+        <statistics> </statistics>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

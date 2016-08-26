@@ -1,7 +1,27 @@
 [
-"Task 1",
-"Task 2",
-"Task 3",
-"Task 4",
-"Task 5"
+    {
+        "name": "Task 1",
+        "estimated": 60.0,
+        "actual": 120.0
+    },
+    {
+        "name": "Task 2",
+        "estimated": 60.0,
+        "actual": 120.0
+    },
+    {
+        "name": "Task 3",
+        "estimated": 60.0,
+        "actual": 120.0
+    },
+    {
+        "name": "Task 4",
+        "estimated": 60.0,
+        "actual": 120.0
+    },
+    {
+        "name": "Task 5",
+        "estimated": 60.0,
+        "actual": 120.0
+    }
 ]

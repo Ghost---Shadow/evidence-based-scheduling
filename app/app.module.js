@@ -4,7 +4,8 @@ angular.module('EbsMonteCarlo', [
   //'ngRoute',
   'members',
   'statistics',
-  'task'
+  'task',
+  'chart.js'
 ]);/*.
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
