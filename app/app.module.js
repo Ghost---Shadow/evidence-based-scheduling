@@ -3,8 +3,8 @@
 angular.module('EbsMonteCarlo', [
   //'ngRoute',
   'members',
+  'task',  
   'statistics',
-  'task',
   'chart.js'
 ]);/*.
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {

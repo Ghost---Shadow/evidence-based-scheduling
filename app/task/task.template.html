@@ -1,12 +1,26 @@
-<button ng-click="$ctrl.addTask()">Add Task</button>
-<div ng-repeat="task in $ctrl.tasks track by $index">
-  <div class="well">  
-    <input type="text" ng-model="task.name" placeholder="Task name"></input>
-    <input type="text" ng-model="task.estimated" placeholder="Estimated time"></input>
-    <span>{{task.actual}}</span>
-    <span>{{$ctrl.getVelocity($index) | number:2}}
-    <button ng-click="$ctrl.toggleTimer($index)">{{$ctrl.getStopwatchStatus($index)}}</button>
-    <button ng-click="$ctrl.removeTask($index)">x</button>
+<div class="row">
+  <div class="col-md-8">
+    <button ng-click="$ctrl.addTask()">Add Task</button>
+    <div ng-repeat="task in $ctrl.tasks track by $index">
+      <div class="well">
+        <input type="text" ng-model="task.name" placeholder="Task name"></input>
+        <input type="text" ng-model="task.estimated" placeholder="Estimated time"></input>
+        <span>{{task.actual}}</span>
+        <span>{{$ctrl.velocities[$index] | number:2}}
+        <button ng-click="$ctrl.toggleTimer($index)">{{$ctrl.isTimerRunning[$index] | StartStopFilter}}</button>
+        <button ng-click="$ctrl.removeTask($index)">x</button>
+      </div>
+    </div>
+  </div>
+
+  <div class = "col-md-4">
+	<div class="panel panel-default">
+	  <div class="panel-heading">Graph</div>
+	  <div class="panel-body">
+		<canvas id="line" class="chart chart-line" chart-data="$ctrl.yAxis" chart-labels="$ctrl.xAxis">
+		</canvas>
+	  </div>
+	</div>
+  <ul><li ng-repeat="analysis in $ctrl.analysis"><span>{{analysis}}</span></li></ul>
   </div>
 </div>
-

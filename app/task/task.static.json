@@ -1,27 +1,32 @@
 [
     {
-        "name": "Task 1",
-        "estimated": 60.0,
-        "actual": 120.0
+        "name": "Setup Environment",
+        "estimated": 60,
+        "actual": 68
     },
     {
-        "name": "Task 2",
-        "estimated": 60.0,
-        "actual": 120.0
+        "name": "Wireframe the website",
+        "estimated": 60,
+        "actual": 58
     },
     {
-        "name": "Task 3",
-        "estimated": 60.0,
-        "actual": 120.0
+        "name": "Tasks container and MVC",
+        "estimated": 90,
+        "actual": 58
     },
     {
-        "name": "Task 4",
-        "estimated": 60.0,
-        "actual": 120.0
+        "name": "Find a graphing library",
+        "estimated": 30,
+        "actual": 34
     },
     {
-        "name": "Task 5",
-        "estimated": 60.0,
-        "actual": 120.0
+        "name": "Implement graphs",
+        "estimated": 30,
+        "actual": 39
+    },
+    {
+        "name": "Monte Carlo Logic",
+        "estimated": 60,
+        "actual": 139
     }
 ]
