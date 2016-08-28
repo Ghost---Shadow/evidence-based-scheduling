@@ -1,32 +1,27 @@
 [
     {
-        "name": "Setup Environment",
+        "name":"Task",
         "estimated": 60,
-        "actual": 68
+        "actual": 60
     },
     {
-        "name": "Wireframe the website",
+        "name":"Task",
         "estimated": 60,
-        "actual": 58
+        "actual": 60
     },
     {
-        "name": "Tasks container and MVC",
-        "estimated": 90,
-        "actual": 58
-    },
-    {
-        "name": "Find a graphing library",
-        "estimated": 30,
-        "actual": 34
-    },
-    {
-        "name": "Implement graphs",
-        "estimated": 30,
-        "actual": 39
-    },
-    {
-        "name": "Monte Carlo Logic",
+        "name":"Task",
         "estimated": 60,
-        "actual": 139
+        "actual": 60
+    },
+    {
+        "name":"Task",
+        "estimated": 60,
+        "actual": 60
+    },
+    {
+        "name":"Task",
+        "estimated": 60,
+        "actual": 60
     }
 ]

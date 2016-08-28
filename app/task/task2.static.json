@@ -1,0 +1,33 @@
+
+[
+    {
+        "name": "Setup Environment",
+        "estimated": 60,
+        "actual": 68
+    },
+    {
+        "name": "Wireframe the website",
+        "estimated": 60,
+        "actual": 58
+    },
+    {
+        "name": "Tasks container and MVC",
+        "estimated": 90,
+        "actual": 58
+    },
+    {
+        "name": "Find a graphing library",
+        "estimated": 30,
+        "actual": 34
+    },
+    {
+        "name": "Implement graphs",
+        "estimated": 30,
+        "actual": 39
+    },
+    {
+        "name": "Monte Carlo Logic",
+        "estimated": 60,
+        "actual": 139
+    }
+]

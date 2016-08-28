@@ -61,15 +61,18 @@ angular.
 
       // Recalculate velocities
       self.updateVelocities = function () {
+        self.velocities = [];
         for (var i = 0; i < self.tasks.length; i++) {
           var task = self.tasks[i];
-          self.velocities[i] = task.estimated / task.actual;
+          if(task.actual > 0)
+            self.velocities[i] = task.estimated / task.actual;
         }
       }
 
       // Recalculate x and y coords for graph
       self.updateGraph = function () {
         self.yAxis[0] = [];
+        self.xAxis = [];
         var elapsedTime = 0;
         var estimatedTime = 0;
         // Calculate total elapsedTime
@@ -94,6 +97,7 @@ angular.
         for(var i = 0; i < n; i++)
           frequency[self.transfer(self.velocities[i])]++;
         
+        //console.log(frequency);
         frequency[0] /= n;
         cumulativeFrequency[0] = frequency[0];
         //self.yAxis[0][0] = frequency[0];
@@ -101,14 +105,14 @@ angular.
           frequency[i] /= n;
           cumulativeFrequency[i] = cumulativeFrequency[i-1] + frequency[i];          
           self.xAxis[i] = parseFloat((estimatedTime * self.bins[i] / 60).toFixed(3));
-          self.yAxis[0][i-1] = cumulativeFrequency[i] * 100;
+          self.yAxis[0][i] = cumulativeFrequency[i] * 100;
         }
         //console.log(self.xAxis);
         //console.log(self.yAxis[0]);
       }
 
       self.transfer = function(velocity){
-        return parseInt(velocity/self.binSize);
+        return parseInt(velocity/self.binSize)-1;
       }
     }
   }).filter('StartStopFilter', function () {
