@@ -1,12 +1,14 @@
-  <canvas id="line" class="chart chart-line" chart-data="data" 
-  chart-labels="labels" chart-series="series" chart-options="options"
-  chart-dataset-override="datasetOverride" chart-click="onClick">
-  GRAPH
-  </canvas>
-
+<div class="panel panel-default">
+  <div class="panel-heading">Graph</div>
+  <div class="panel-body">
+    <canvas id="line" class="chart chart-line" chart-data="$ctrl.data" chart-labels="$ctrl.labels" chart-series="$ctrl.series"
+      chart-options="$ctrl.options" chart-dataset-override="$ctrl.datasetOverride" chart-click="$ctrl.onClick">
+    </canvas>
+  </div>
+</div>
 
 <ul>
-  <li ng-repeat="statistic in $ctrl.statistics">
-    <span>{{statistic}}</span>
+  <li ng-repeat="analysis in $ctrl.analysis">
+    <span>{{analysis}}</span>
   </li>
 </ul>
