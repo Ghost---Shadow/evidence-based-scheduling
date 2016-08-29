@@ -1,4 +1,3 @@
-
 [
     {
         "name": "Setup Environment",
@@ -29,5 +28,25 @@
         "name": "Monte Carlo Logic",
         "estimated": 60,
         "actual": 139
+    },
+    {
+        "name": "Up down arrows",
+        "estimated": 30,
+        "actual": 0
+    },
+    {
+        "name": "MongoDB integration",
+        "estimated": 120,
+        "actual": 0
+    },
+    {
+        "name": "Multiple team members",
+        "estimated": 60,
+        "actual": 0
+    },
+    {
+        "name": "Multiple projects",
+        "estimated": 30,
+        "actual": 0
     }
 ]

@@ -17,7 +17,7 @@ angular.
       self.binSize = .2;
 
       // TODO: Load tasks from mongodb
-      $http.get('task/task.static.json').then(function (response) {
+      $http.get('/tasks').then(function (response) {
         self.tasks = response.data;
       });
 
