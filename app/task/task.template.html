@@ -1,8 +1,9 @@
 <div class="row">
   <div class="col-md-8">
     <button ng-click="$ctrl.addTask()">Add Task</button>
-    <div ng-repeat="task in $ctrl.tasks">
+    <div ng-repeat="task in $ctrl.tasks | orderBy:'order'">
       <div class="well">
+        {{task.order}}
         <input type="text" ng-model="task.name" placeholder="Task name"></input>
         <input type="text" ng-model="task.estimated" placeholder="Estimated time"></input>
         <span>{{task.actual}}</span>
@@ -10,7 +11,8 @@
         <button ng-click="$ctrl.toggleTimer(task._id)">{{$ctrl.isTimerRunning[$ctrl.findIndexForId(task._id)] | StartStopFilter}}</button>
         <button ng-click="$ctrl.changeOrder(task._id,1)">^</button>
         <button ng-click="$ctrl.changeOrder(task._id,-1)">v</button>
-        <button ng-click="$ctrl.removeTask(task._id)">x</button>
+        <button ng-click="$ctrl.removeTask(task._id)">x</button>        
+        <button ng-click="$ctrl.update(task._id)">Update</button>
       </div>
     </div>
   </div>
