@@ -1,14 +1,16 @@
 <div class="row">
   <div class="col-md-8">
     <button ng-click="$ctrl.addTask()">Add Task</button>
-    <div ng-repeat="task in $ctrl.tasks track by $index">
+    <div ng-repeat="task in $ctrl.tasks">
       <div class="well">
         <input type="text" ng-model="task.name" placeholder="Task name"></input>
         <input type="text" ng-model="task.estimated" placeholder="Estimated time"></input>
         <span>{{task.actual}}</span>
-        <span>{{$ctrl.velocities[$index] | number:2}}
-        <button ng-click="$ctrl.toggleTimer($index)">{{$ctrl.isTimerRunning[$index] | StartStopFilter}}</button>
-        <button ng-click="$ctrl.removeTask($index)">x</button>
+        <span>{{$ctrl.velocities[$ctrl.findIndexForId(task._id)] | number:2}}
+        <button ng-click="$ctrl.toggleTimer(task._id)">{{$ctrl.isTimerRunning[$ctrl.findIndexForId(task._id)] | StartStopFilter}}</button>
+        <button ng-click="$ctrl.changeOrder(task._id,1)">^</button>
+        <button ng-click="$ctrl.changeOrder(task._id,-1)">v</button>
+        <button ng-click="$ctrl.removeTask(task._id)">x</button>
       </div>
     </div>
   </div>

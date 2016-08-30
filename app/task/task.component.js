@@ -19,6 +19,7 @@ angular.
       // TODO: Load tasks from mongodb
       $http.get('/tasks').then(function (response) {
         self.tasks = response.data;
+        //console.log(self.tasks);
       });
 
       // Add a new task
@@ -26,20 +27,40 @@ angular.
         var newTask = {
           "name": "",
           "estimated": NaN,
-          "actual": 0.0
+          "actual": 0.0,
+          "order":tasks.length
         };
         self.tasks.push(newTask);
+        // TODO: Add task to database
+      }
+
+      // TODO: Optimize
+      self.findIndexForId = function(_id){
+        for(var i = 0; i < self.tasks.length; i++){
+          if(self.tasks[i]._id == _id) break;
+        }
+        return i;
       }
 
       // Remove task
-      self.removeTask = function (index) {
+      self.removeTask = function (_id) {
+        var index = self.findIndexForId(_id);
         self.isTimerRunning.splice(index, 1);
         self.tasks.splice(index, 1);
         // TODO: Remove task from database
       }
 
+      // Move task up or down
+      self.changeOrder = function(_id,delta){
+        var index = self.findIndexForId(_id);
+        var temp = self.tasks[index];
+        self.tasks.splice(index, 1);
+        self.tasks.splice(index-delta, 0, temp);
+      }
+
       // Toggle the state of timer
-      self.toggleTimer = function (index) {
+      self.toggleTimer = function (_id) {
+        var index = self.findIndexForId(_id);
         if (self.isTimerRunning[index] == undefined || !self.isTimerRunning[index]) {
           self.isTimerRunning[index] = true;
         } else {
